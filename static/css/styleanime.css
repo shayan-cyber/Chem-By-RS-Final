@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.anime{
+    text-align: center;
+}
+#plant{
+    animation: tree 0.4s ease infinite alternate;
+    transform-origin: bottom;
+
+}
+
+#plant2{
+    animation: plant2 1s  infinite ease ;
+    transform-origin: bottom;
+    transform-box: fill-box;
+
+}
+#leaftop{
+    animation: leaftop 0.7s  infinite ease ;
+    transform-origin: bottom;
+    transform-box: fill-box;
+
+}
+
+#flask{
+    animation: flask 0.5s ease infinite alternate ;
+    transform-origin: left;
+}
+
+#man{
+    animation: man 0.8s linear infinite alternate ;
+    transform-origin: bottom;
+}
+#bulb{
+    animation: bulb 0.8s ease-in-out infinite alternate ;
+    transform-origin: top;
+}
+
+#bubbles{
+    animation: bubbles 1.1s ease-in-out infinite alternate ;
+    transform-origin: top;
+}
+#tube{
+    animation: tube 1.1s linear infinite alternate ;
+    transform-origin: bottom;
+}
+@keyframes tree{
+    from{
+        transform:rotateX(0deg);
+
+    }
+    to{
+        transform:rotateX(20deg) ;
+
+    }
+}
+
+@keyframes flask{
+
+    from{
+        transform:rotateY(0deg);
+
+    }
+    to{
+        transform:rotateY(11deg);
+
+    }
+}
+
+@keyframes man{
+
+    from{
+        transform:translateX(0%);
+
+    }
+    to{
+        transform:translateX(5%);
+
+    }
+}
+
+@keyframes bulb{
+
+    from{
+        transform:translateY(0%);
+
+    }
+    to{
+        transform:translateY(5%);
+
+    }
+}
+@keyframes bubbles{
+
+    from{
+        transform:translateY(0%);
+
+    }
+    to{
+        transform:translateY(2%);
+
+    }
+}
+
+@keyframes tube{
+
+    from{
+        transform:translateY(0%);
+
+    }
+    to{
+        transform:translateY(2%);
+
+    }
+}
+
+@keyframes plant2{
+
+    from{
+        transform:rotateZ(0deg);
+
+    }
+    to{
+        transform:rotateZ(6deg);
+
+    }
+}
+
+@keyframes leaftop{
+
+    from{
+        transform:rotateZ(0deg);
+
+    }
+    to{
+        transform:rotateZ(9deg);
+
+    }
+}

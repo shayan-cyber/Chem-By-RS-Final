@@ -159,7 +159,8 @@ def faculty_add_question(request):
         print(request.POST.get("status", False))"""
         if(request.method == "POST" and request.POST.get("question", False) != False and request.POST.get("description", False) != False and request.POST.get("question_type", False) != False and request.POST.get("subtopic", False) != False and request.POST.get("level", False) != False and request.POST.get("exam", False) != False and request.POST.get("score", False) != False and request.POST.get("status", False) != False):
             temp = question_bank()
-            temp.question =request.POST["question"] 
+            temp.question =request.POST["question"]
+            temp.image2 = request.FILES.get("img2") 
             temp.description = request.POST["description"]
             temp.question_type = question_type.objects.get(pk=request.POST["question_type"])
             temp.subtopic_id = subtopic.objects.get(pk = request.POST["subtopic"])
@@ -207,9 +208,9 @@ def faculty_add_question(request):
                 return render(request ,'online_exam/faculty_add_question.html',  {"courses": course.objects.all(), "topics": topic.objects.all(), "levels": level.objects.all(), "question_type":question_type.objects.all(), "message":message})
             else:
                 wrong_message = "Sorry, question already exists under the subtopic!!"
-                return render(request ,'online_exam/faculty_add_question.html', {"courses": course.objects.all(), "topics": topic.objects.all(), "levels": level.objects.all(), "question_type":question_type.objects.all(), "wrong_message":wrong_message})   
+                return render(request ,'online_exam/faculty_add_question.html', {"courses": course.objects.all(), "topics": topic.objects.all(), "levels": level.objects.all(), "question_type":question_type.objects.all(),"examms":exam_detail.objects.all(),"subtop":subtopic.objects.all(), "wrong_message":wrong_message})   
         else:
-            return render(request ,'online_exam/faculty_add_question.html', {"courses": course.objects.all(), "topics": topic.objects.all(), "levels": level.objects.all(), "question_type":question_type.objects.all()})
+            return render(request ,'online_exam/faculty_add_question.html', {"courses": course.objects.all(), "topics": topic.objects.all(), "levels": level.objects.all(), "question_type":question_type.objects.all(),"examms":exam_detail.objects.all(),"subtop":subtopic.objects.all()})
     else:
         return redirect("../login")
 
@@ -917,10 +918,20 @@ def student_attempt_exam(request):
         exam_id = ""
         j = 0
         for i in questions:
+
             L = dict()
             L['question_id'] = i.id
             L['question'] = i.question
+            if i.image2 :
+
+            
+                L['image'] = i.image2.url
+                print(i.image2.url)
+                print(L['image'])
+                
+            
             L['question_type'] = i.question_type.q_type
+            
             if(i.question_type.id == 1 or i.question_type.id == 2):
                 opt_dict = dict()
                 for k in option.objects.filter(question_id = i.id):
@@ -949,6 +960,7 @@ def student_attempt_exam(request):
             L['course'] = i.exam_id.course_id.course_name
             j += 1
             K[j] = L
+           
         final = json.dumps(K)
         a = datetime.datetime.now()
         b = datetime.datetime(i.exam_id.end_time.year,i.exam_id.end_time.month,i.exam_id.end_time.day,i.exam_id.end_time.hour,i.exam_id.end_time.minute,i.exam_id.end_time.second)
@@ -1007,7 +1019,7 @@ def student_verify(request):
                 if(json.dumps(ans) == json.dumps(attempted_answer['answers'])):
                     temp.score = int(attempted_answer['score'])
                 else:
-                    temp.score = 0
+                    temp.score = -1
                 marks += temp.score
                 temp.verify = 1
                 temp.save()
@@ -1023,7 +1035,7 @@ def student_verify(request):
                 if(json.dumps(ans) == json.dumps(attempted_answer['answers'])):
                     temp.score = int(attempted_answer['score'])
                 else:
-                    temp.score = 0
+                    temp.score = -1
                 marks += temp.score
                 temp.verify = 1
                 temp.save()
@@ -1033,7 +1045,7 @@ def student_verify(request):
                 temp.question_id = ques
                 temp.answer = dict(attempted_answer['answers'])
                 temp.answer = temp.answer['1']
-                temp.score = 0
+                temp.score = -1
                 temp.verify = 0
                 temp.save()                 
         return HttpResponse(marks)
@@ -1216,3 +1228,192 @@ def get_subtopics_by_topic(request):
             j += 1
         return HttpResponse(json.dumps(subtopics))
     return HttpResponseNotFound('<h1>Page not found</h1>')
+
+
+
+
+
+#custom section
+
+
+
+from django.shortcuts import render,HttpResponse
+from .models import Post,Category,News
+from django.core.mail import send_mail
+
+# Create your views here.
+def home(request):
+    allPosts = Post.objects.all().order_by('-timeStamp')
+    allposts1= list(allPosts)
+    for posts in allposts1:
+        posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+        news = News.objects.all().order_by('-timeStamp')
+        
+    allposts2 = allposts1 
+    print(allposts2)
+
+    
+    context = {'allPosts' : allposts2,'news':news}
+    
+    return render(request,'online_exam/index.html',context)
+
+
+
+def addvideo(request):
+    allPosts = Post.objects.all().order_by('-timeStamp')
+    context = {'allPosts' : allPosts}
+    
+    return render(request,'online_exam/customadd.html',context)
+def videos(request):
+    allPosts = Post.objects.all().order_by('-timeStamp')
+    allposts1= list(allPosts)
+    for posts in allposts1:
+        posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+        news = News.objects.all().order_by('-timeStamp')
+        
+    allposts2 = allposts1 
+    print(allposts2)
+
+    
+    context = {'allPosts' : allposts2}
+    
+    #url converter
+
+    """
+        allPosts = Post.objects.all().order_by('-timeStamp')
+    allposts1= list(allPosts)
+    for posts in allposts1:
+        posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+        news = News.objects.all().order_by('-timeStamp')
+        
+    allposts2 = allposts1 
+    print(allposts2)
+
+    
+    context = {'allPosts' : allposts2,'news':news}
+    """
+   
+    
+    return render(request,'online_exam/videos.html',context)
+def about(request):
+    return render(request, 'online_exam/about.html')
+def contact(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        string = "Hey!! " + name + ","  " Your Message Sent Successfully ..We Will Respond  ASAP.."
+        #send an email
+        send_mail(
+
+            name,#subject
+            message,#message
+            email,#from email
+            ['debroyshayan@gmail.com'],#to email
+        )
+
+        return render(request, 'online_exam/contact.html',{'name':name,'string':string})
+
+    else:
+        return render(request, 'online_exam/contact.html')
+
+def inorganic(request):
+    allPosts=Post.objects.filter(categories__title="Inorganic Chemistry")
+    allposts1= list(allPosts)
+    for posts in allposts1:
+        posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+        news = News.objects.all().order_by('-timeStamp')
+        
+    allposts2 = allposts1 
+    print(allposts2)
+
+    
+    context = {'allPosts' : allposts2}
+
+    #context1={'allPosts': vdo}
+    return render(request,'online_exam/inorganic.html',context)
+def organic(request):
+    allPosts=Post.objects.filter(categories__title='Organic Chemistry')
+    allposts1= list(allPosts)
+    for posts in allposts1:
+        posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+        news = News.objects.all().order_by('-timeStamp')
+        
+    allposts2 = allposts1 
+    print(allposts2)
+
+    
+    context = {'allPosts' : allposts2}
+    #context1={'allPosts': vdo}
+    return render(request,'online_exam/organic.html',context)
+
+def physical(request):
+    allPosts=Post.objects.filter(categories__title="Physical Chemistry")
+    allposts1= list(allPosts)
+    for posts in allposts1:
+        posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+        news = News.objects.all().order_by('-timeStamp')
+        
+    allposts2 = allposts1 
+    print(allposts2)
+
+    
+    context = {'allPosts' : allposts2}
+    #context={'allPosts': vdo}
+    return render(request,'online_exam/physical.html',context)
+def book(request):
+    allPosts=Post.objects.filter(categories__title="Book Solution")
+    allposts1= list(allPosts)
+    for posts in allposts1:
+        posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+        news = News.objects.all().order_by('-timeStamp')
+        
+    allposts2 = allposts1 
+    print(allposts2)
+
+    
+    context = {'allPosts' : allposts2}
+    #context1={'allPosts': vdo}
+    return render(request,'online_exam/book.html',context)
+def search(request):
+    query = request.GET['query']
+    if len(query)>140:
+        allPosts = Post.objects.none()
+    else:
+        allPoststitle = Post.objects.filter(title__icontains=query)
+        allPostscontent = Post.objects.filter(desc__icontains=query)
+        allPosts = allPoststitle.union(allPostscontent)
+        allposts1= list(allPosts)
+        if len(allposts1) ==0:
+            params = {'msg':"No Result",'query':query}
+        else:
+            for posts in allposts1:
+                posts.embed = posts.youtube_link.replace("watch?v=" ,"embed/")
+
+                news = News.objects.all().order_by('-timeStamp')
+                
+            allposts2 = allposts1 
+            print(allposts2)
+
+            
+            #context = {'allPosts' : allposts2}
+            
+            params = {'allPosts':allposts2, 'query': query}
+    return render(request,'online_exam/search.html',params)
+    #return HttpResponse('this is search')
+
+    
+    
+    
+    
+    
+    
+

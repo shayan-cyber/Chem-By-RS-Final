@@ -1,0 +1,1541 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" style="cursor: pointer;">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+	<!-- Author Meta -->
+	<meta name="author" content="codepixer">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Chem By RS</title>
+
+	<!--
+			Google Font
+			============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+	<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+    
+    <link rel="stylesheet" href="{% static 'css/styleanime.css' %}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+    
+
+img.vert-move {
+    -webkit-animation: mover 0.6s infinite  alternate;
+    animation: mover 0.6s infinite  alternate;
+}
+img.vert-move {
+    -webkit-animation: mover 0.6s infinite  alternate;
+    animation: mover 0.6s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+    
+  
+
+svg {
+  max-height: auto;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+
+
+
+
+
+
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+
+
+/* Home section */
+
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 2.1rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+
+
+
+
+
+.myH2 {
+	text-align:center;
+	font-size: 2rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 10px;
+}
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+}
+
+
+
+
+
+.chem2 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.chem3 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.chem:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+img.vert-move {
+    -webkit-animation: mover 0.6s infinite  alternate;
+    animation: mover 0.6s infinite  alternate;
+}
+img.vert-move {
+    -webkit-animation: mover 0.6s infinite  alternate;
+    animation: mover 0.6s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+
+
+
+
+
+img.vert-move2 {
+	position: absolute;
+    bottom: -22px;
+    left: 40%;
+    -webkit-animation: mover 0.6s infinite  alternate;
+    animation: mover 0.6s infinite  alternate;
+}
+img.vert-move2 {
+    -webkit-animation: mover 0.6s infinite  alternate;
+    animation: mover 0.6s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+
+
+
+
+
+
+
+
+.widget-wrap .search-widget form.search-form button {
+    float: left;
+    width: 20%;
+    padding: 8px;
+    background: #39cfca;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.widget-wrap .single-sidebar-widget:last-child {
+    border-bottom: none;
+    /* margin-bottom: 0px; */
+}
+
+
+
+
+
+
+
+/* news*/
+
+
+
+
+
+/*anime*/
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+html,
+.anime {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+.Layer_1 {
+  opacity: 0;
+  overflow: visible;
+  position: relative;
+  left: 50%;
+  top: 53%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#text {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  width: 100%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  font-family:  "Comic Sans MS", cursive, sans-serif;
+  color: #ED002E;
+  font-size: 20px;
+  font-weight: 900;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  font-size: 4.5vw;
+  
+  text-align: left;
+  white-space: nowrap;
+}
+
+#text span {
+    font-family: Georgia, serif;
+    position:absolute;
+    margin-bottom: 5px;
+    
+
+  color:black;
+  font-size: 10px;
+  font-size: 2vw;
+}
+.sick{
+    position: static;
+  left: 50%;
+  top: 200px;
+ font-family:  Impact, sans-serif;
+ 
+  font-size: 20px;
+  font-weight: 900;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  font-size: 4.5vw;
+  
+  text-align: center;
+  white-space: nowrap;
+
+  animation: tree 0.4s ease infinite alternate;
+  transform-origin: bottom;
+
+}
+
+
+
+@keyframes tree{
+    from{
+        transform:rotateX(0deg);
+
+    }
+    to{
+        transform:rotateX(20deg) ;
+
+    }
+}
+
+
+
+/*text*/
+.sick2{
+    background: linear-gradient(to bottom, #33ccff 0%, white 100%)
+    
+}
+
+
+/*test*/
+
+.mt-0, .my-0 {
+    margin-top: -160px!important;
+}
+
+
+.mb-0, .my-0 {
+    margin-top: -110px!important;
+}
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*loader*/
+
+body {
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  height: 100%;
+  background-color: #eee;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #39cfca;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+.containerbread{
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 78.5%;
+    font-size: 17px;
+}
+
+
+#drop{
+    background-color:black;
+    width:auto;
+    
+
+}
+#dropx {
+    text-align: right;
+    width: 100%;
+    font-size: 2.1rem;
+    padding: 0px;
+    height:40px;
+}
+
+#manwalk{
+    background: #cbf1f5;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+    z-index: 10;
+    display: block;
+    
+
+}
+#faculty{
+    background: #cbf1f5;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+    z-index: 10;
+    
+
+}
+.gallery{
+    
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 9vh));
+    margin-bottom: 6vh;
+    
+    
+    
+    
+    
+}
+
+
+
+
+#courses{
+    background: #cbf1f5;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+    z-index: 10;
+    margin-top: 0;
+    
+    
+    
+    
+
+}
+.cp{
+    background: #e3fdfd;
+
+}
+
+.gallery {
+	background: linear-gradient(-45deg, #cbf1f5, #ffa5b0, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient1 15s ease infinite;
+}
+
+@keyframes gradient1 {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#feature {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+#news3{
+    background: white;
+}
+ </style>
+    
+
+    
+
+
+</head>
+
+<body>
+
+	<!-- Start Header Area -->
+    <section>
+        <header id="header">
+            <nav class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#"><img style="padding-top: 0mm;" src="https://i.imgur.com/QH6rBMn.png" alt=""></a>
+                    </div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="navlinks">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                            <li><a href="/about/">About</a></li>
+                            <li><a href="/signup/">Test</a></li>
+                            <li><a href="/videos/">videos</a></li>
+                            
+                            
+                            <li id="dropy">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="dropx">Categories</a>
+                                <div class="dropdown-menu" id ="drop">
+                                  <a class="dropdown-item" href="/organic/">Organic Chemistry</a>
+                                  <a class="dropdown-item" href="/inorganic/">Inorganic Chemistry</a>
+                                  <a class="dropdown-item" href="/physical/">Physical Chemistry</a>
+                                  <a class="dropdown-item" href="/book/">Book Solution</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/admin/">Admin</a>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <span class="navTrigger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <!-- End Header Area 
+    -->
+
+
+	<!-- Start Banner Area -->
+	<section class="home-banner-area relative" id='teachanime'>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+                
+                
+
+                
+
+
+
+
+
+                <div class="anime">
+                    
+                    <svg style="height: 93vh; margin-top:9%" id="b1d7f725-135f-4616-be58-aeb0ca4fa5a4" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="954.12697" height="712.25413" viewBox="0 0 954.12697 712.25413"><title>online_media</title><rect x="308.25394" y="245.86832" width="480" height="379" fill="#f2f2f2"/><path d="M844.19045,674.74125h-482v-381h482Zm-480-2h478v-377h-478Z" transform="translate(-122.93652 -93.87293)" fill="#3f3d56"/><rect x="21.5409" y="698.16684" width="556.10756" height="2.36139" fill="#3f3d56"/><polygon points="413.254 503.238 412.973 305.238 637.113 403.921 413.254 503.238" fill="#d0cde1"/><path d="M490.66556,407.72364s21.11655-23.72955,25.50109-14.68655-21.46113,22.79079-21.46113,22.79079Z" transform="translate(-122.93652 -93.87293)" fill="#a0616a"/><path d="M501.72048,417.51121s-9.39,3.45-12.11,7.64c-2.72,4.2-11.77,8.58-11.77,8.58l-.79.47-8.54,5.09-11.19,6.66-35.42,21.1-46.75,18.72c-.36-6.53-.71-13.06-1.04-19.24-.1-1.85-.12-3.69-.08-5.53.59-.18,1.19-.34,1.8-.47,13.82995-2.95,19.71-7.24,19.71-7.24l27.04-16.31s21.23-13.53,34.7-19.88c1.88995-.9,3.62994-1.65,5.12994-2.2,12.2-4.48,31.92005-11.72,31.92005-11.72l.23.45,4.88,9.45Z" transform="translate(-122.93652 -93.87293)" fill="#d0cde1"/><path d="M501.72048,417.51121s-9.39,3.45-12.11,7.64c-2.72,4.2-11.77,8.58-11.77,8.58l-.79.47-8.54,5.09-11.19,6.66-35.42,21.1-46.75,18.72c-.36-6.53-.71-13.06-1.04-19.24-.1-1.85-.12-3.69-.08-5.53.59-.18,1.19-.34,1.8-.47,13.82995-2.95,19.71-7.24,19.71-7.24l27.04-16.31s21.23-13.53,34.7-19.88c1.88995-.9,3.62994-1.65,5.12994-2.2,12.2-4.48,31.92005-11.72,31.92005-11.72l.23.45,4.88,9.45Z" transform="translate(-122.93652 -93.87293)" opacity="0.1"/><polygon points="371.394 503.027 371.114 305.027 595.254 403.709 371.394 503.027" fill="#63ffd5"/><polygon points="580.932 397.404 371.376 490.375 371.394 503.027 595.254 403.709 580.932 397.404" opacity="0.2"/><polygon points="308.754 666.368 308.754 687.368 324.754 687.368 322.754 665.368 308.754 666.368" fill="#a0616a"/><polygon points="246.754 665.368 241.754 689.368 261.754 690.368 261.754 665.368 246.754 665.368" fill="#a0616a"/><path d="M377.69045,569.24125s-5-2-6,16-2,80-2,80-10,55-6,71,4,27,4,27h18l1-10,1-27s10-25,7-48l24-73,12,78s-5,19-4,39,1,46,1,46l20-2,16-94s9-94,0-99S377.69045,569.24125,377.69045,569.24125Z" transform="translate(-122.93652 -93.87293)" fill="#2f2e41"/><path d="M437.69045,774.24125s-9-12-13-3-13,21-6,27,16,8,19,6,34-18,34-18,6-17-6-18-16-4-16-4Z" transform="translate(-122.93652 -93.87293)" fill="#2f2e41"/><path d="M368.69045,777.24125s0-10-4-7-7,16-7,16-24,19-1,19,38,4,36-5-5-24-5-24S377.69045,763.24125,368.69045,777.24125Z" transform="translate(-122.93652 -93.87293)" fill="#2f2e41"/><circle cx="308.75394" cy="277.36832" r="25" fill="#a0616a"/><path d="M412.19045,379.74125s-4,29-10,33,40,5,40,5-3-23,0-29Z" transform="translate(-122.93652 -93.87293)" fill="#a0616a"/><path d="M490.69045,578.24125s15,28,5,29-14-28-14-28Z" transform="translate(-122.93652 -93.87293)" fill="#a0616a"/><path d="M408.59286,389.39486a18.6529,18.6529,0,0,0,22.68218-5.04267c3.36353-4.396,5.31377-10.79729,10.67748-12.16417,3.50189-.89242,7.5404.79182,10.66715-1.02011,5.83465-3.38115,1.73691-14.09869,7.15461-18.11416a9.29624,9.29624,0,0,1-9.145-8.6456c-.1385,1.87192-2.5995,2.71089-4.39492,2.16341s-3.20509-1.92838-4.88141-2.77289c-2.92887-1.47554-6.39492-1.20688-9.66037-.90305-8.34408.77637-17.34672,1.83575-23.47627,7.55021-5.75962,5.36958-7.67431,13.95588-6.55262,21.74994s3.10225,10.35234,7.29449,17.018Z" transform="translate(-122.93652 -93.87293)" fill="#2f2e41"/><path d="M470.69045,423.24125l-.14,1-2.04,15.05-8.37,61.66-.45,3.29s.99,2.41,2.23,6.25c2.1,6.47,4.94,17,5.05,26.92a44.75658,44.75658,0,0,1-.28,5.83c-1.5,12.75-1.88,25.5-1.97,31.08-.03,1.86-.03,2.92-.03,2.92l-91-3a41.92906,41.92906,0,0,0,1.51-3.92,71.82288,71.82288,0,0,0,3.49-30.08c-.89-8.46-2.28-31.51-3.54-54.47-.36-6.53-.71-13.06-1.04-19.24-.1-1.85-.12-3.69-.08-5.53a73.41293,73.41293,0,0,1,27.66-55.76s1.84.08,4.74.25c9.12.53,28.76,1.91,34.93,4.18a7.41422,7.41422,0,0,1,.83.35c2.98,1.47,9.21,4.38,15.09,7.08C464.23043,420.30125,470.69045,423.24125,470.69045,423.24125Z" transform="translate(-122.93652 -93.87293)" fill="#d0cde1"/><path d="M456.69045,424.24125h14s12,14,10,28,0,21,0,21l6,31s7,32,7,45v34l-16,2s0-10-3-14-4-14-4-14l-12-64Z" transform="translate(-122.93652 -93.87293)" fill="#d0cde1"/><rect x="227.73355" y="410.85281" width="30.9126" height="29.84223" transform="translate(-260.14746 22.51454) rotate(-21.14419)" fill="#63ffd5"/><path d="M257.77785,431.92009,227.429,443.65764l-11.33113-29.298,30.34887-11.73756Zm-29.398,9.68578,27.314-10.5638-10.198-26.36822-27.314,10.5638Z" transform="translate(-122.93652 -93.87293)" fill="#3f3d56"/><rect x="963.41294" y="190.90244" width="30.9126" height="29.84223" transform="translate(732.32278 -880.65651) rotate(71.02706)" fill="#63ffd5"/><path d="M972.17481,220.16823l-10.57932-30.77178,29.70627-10.213,10.57933,30.77178Zm-8.565-29.74384,9.52139,27.6946,26.73565-9.1917-9.52139-27.6946Z" transform="translate(-122.93652 -93.87293)" fill="#3f3d56"/><path d="M207.43005,793.54624l-1.26718-.475c-.27845-.10493-27.99251-10.72311-40.975-34.79939-12.983-24.07742-6.62585-53.06672-6.56012-53.35613l.29921-1.32021,1.26659.475c.27846.10493,27.99194,10.72312,40.975,34.79939,12.983,24.07742,6.62584,53.06672,6.56012,53.35613ZM167.2668,757.15108c10.9762,20.35662,32.87672,30.79147,38.42564,33.17362,1.055-5.94729,4.36362-29.99705-6.60278-50.33406-10.96525-20.33472-32.87442-30.78572-38.42565-33.17363C159.60842,712.76777,156.301,736.81521,167.2668,757.15108Z" transform="translate(-122.93652 -93.87293)" fill="#3f3d56"/><path d="M175.10951,749.82624c23.33121,14.03683,32.31679,41.91784,32.31679,41.91784s-28.84178,5.12282-52.173-8.914-32.31679-41.91784-32.31679-41.91784S151.7783,735.78941,175.10951,749.82624Z" transform="translate(-122.93652 -93.87293)" fill="#63ffd5"/><rect x="21.12697" y="25.06122" width="933" height="2" fill="#3f3d56"/><circle cx="40.18819" cy="9.06122" r="9.06122" fill="#3f3d56"/><circle cx="68.12697" cy="9.06122" r="9.06122" fill="#3f3d56"/><circle cx="96.06574" cy="9.06122" r="9.06122" fill="#3f3d56"/><rect x="367.47979" y="93.45444" width="213.40346" height="2.39779" fill="#3f3d56"/><rect x="367.47979" y="110.23898" width="213.40346" height="2.39779" fill="#3f3d56"/><rect x="367.47979" y="127.02353" width="213.40346" height="2.39779" fill="#3f3d56"/></svg>
+                    </div>
+                    </div>
+                    </div>
+		<div class="rocket-img">
+            <img src="{% static 'img/chemistry.png' %}" class="vert-move" />
+		</div>
+    </section>
+    <div class="widget-wrap">
+        
+    </div>
+    <div class="container mt-2">
+        <div class="widget-wrap ">
+            <div class="row">
+        
+        <div class="col-lg-4">
+            <img src="{% static 'img/chemistry3.png' %}" class="vert-move2" />
+            <!--  -->
+        </div>
+        
+        <div class="col-lg-4 my-5">
+            <img src="{% static 'img/sick.png' %}" class="chem2" />
+            <!--  -->
+        </div>
+        
+        <div class="col-lg-4 my-5">
+            <img src="{% static 'img/chemistry4.png' %}" class="chem3" />
+            <!--  -->
+        </div>
+    
+        </div>
+    </div>
+    </div>
+    
+      <!-- Start top-category-widget Area -->
+      
+    
+    <!-- End Banner Area -->
+    <!--loader-->
+
+	<div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        <br><br>
+        <center><p> Loading....</p></center>
+      </div>
+      
+      
+    <!--<div class="sick2">
+
+
+
+        
+    <h1 class="sick">Let's Explore </h1>
+    </div>-->
+    
+
+    
+
+    
+
+
+	<!-- Start About Area -->
+	<section class="about-area section-gap mt-3" id='manwalk'>
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-lg-12 col-md-6 about-left">
+                    
+                    
+					<div class="animewalk">
+                        <div id="text"><span>No Matter How Hard it is,</span> Just Keep Going</div>
+                        
+
+                        
+                    <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="325" height="325" viewBox="15 0 315 315">
+                      <circle fill="white" cx="172" cy="165" r="150" stroke='rgba(255,255,255,.4)' stroke-width='30'/>
+                      <ellipse id="mSH" opacity='.2' cx="175" cy="313" rx="110" ry="10"/>
+                      <g id="B">
+                          <g id="UB">
+                          <g id="H">
+                            <path d="M188.8.2c-9.1-.3-16.2 7.3-16.2 15.4 0 8.9 7.2 13.8 7.2 13.8s1.3 3.8 0 6.9c-2.1 4.8-6.6 11.1-6.6 11.1l17.6 8.9s-3.8-8.4-2.2-13.8c.8-2.9 4.7-3.5 6.9-3.1 3.8 3.7 7.7 5.5 9.1 4.6 1.9-1.2 4.9-18.4 4.5-26.8-.4-8.5-9.5-16.3-20.3-17z"/>
+                            <g fill='none' stroke='#fff' opacity='0.4'>
+                            <path d="M191.1.3s4 4.4 4.9 17.9-.9 21-.9 21"/>
+                            <path d="M172.6 16.2s8.2 2.1 19.2 2.4c11.5.3 17.4-1.5 17.4-1.5"/>
+                            </g>
+                            <g fill='none' stroke='#fff' opacity='0.7' stroke-linecap='round' stroke-width='3' >
+                               <path class="st4" d="M181,7.1c-0.8,0.7-1.6,1.4-2.2,2.3"/>
+                            <path class="st4" d="M198.6,7.6c-4.1-2.8-9.3-4.3-14-2.6"/>
+                            </g>
+                          </g>
+                          <path d="M196.9 83.1c-1.6 8-2.9 14.6-2.9 14.6l-4.9 46.1-21.9-7.7 3.4-11c.7-3.7.9-8.5.4-12.3-4.272-29.697-8.373-41.774-5.7-52.182 2.043-6.93 9.2-17.518 9.2-17.518s3.7 1.4 6.6 2.2c3.5 1.2 8.3 2.9 8.3 2.9s10 21.9 7.5 34.9z"/>
+                          <path class="FB" d="M167.5 132.7c-9 18.6 6.4 27.6 10.6 27.6 6 0 11.8-9.2 12.3-24.1l-22.9-5.7v2.2z"/>
+                        </g>
+                        <g id="FF">
+                          <path d="M169.2 223.345c.1-.21-.4-2.11 1.4-20.466-1.9-15.51-4.6-39.88-1.2-52.86 2.9-12.66 16.7-15.83 19.1-1.588.4 11.183.4 15.51-2 35.66-4.6 23.313-9.7 39.243-9.8 40.09-.1.525-2.2 2.32-4.4 2.002-1.7.104-3.3-2.217-3.1-2.85z"/>
+                          <g class="F1">
+                            <path d="M162.9 307.954s1.2-11.393.3-24.264c-.5-9.284-5.8-30.594-4.7-38.93 6.8-18.777 13.6-23.42 16.4-22.26 1.1.95 1.9 2.322 1.3 4.01-.1.106-3.8 23.632-6 40.3-2.3 18.04.7 41.144.7 41.144h-8z"/>
+                            <g class="F2">
+                            <path d="M192.2 316.183s-25.4-16.985-28.8-14.242c-1.4 6.65-11.8 19.1-2.9 22.9 3.3 1.27 7-1.16 8.3-1.37 6.3-1.16 19.1 1.48 20.2 1.48 2.8 0 5.1-1.687 5.1-4.64 0-1.69-.8-3.27-1.9-4.116z"/>
+                            <path class="F3" d="M191.7 315.867s-1.5-.528-2.3-.528c-2.6 0-4.6 2.11-4.6 4.85 0 2.42 1.7 4.53 4.1 4.75 0 0 17 .95 17.3-2.64.3-3.38-7.5-2.85-14.5-6.44z"/>
+                            </g>
+                          </g>
+                        </g>
+                       <path fill='#333' d="M191.1 49.9l-18.9-3.7c-.9-.1-1.2-1.1-.6-1.6l1.9-2.3c.2-.3.7-.4 1.1-.3l16.7 5.7c-.1-.1-.2 2.2-.2 2.2z"/>
+                        <g id="HF">
+                          <path d="M179.9 111.275c.5-1.88 7.2-21.42 6.3-36.154 4.4-10.76 2-18.49.7-21.42-3.1-7-13.2-5.74-14.6 4.29-.5 3.66-1.5 10.87 2 19.33-2.6 17.24.7 31.87.9 33.96s4.1 1.988 4.7 0"/>
+                          <g class="H1">
+                            <path d="M185 122.56c-.5-3.135-4.4-17.137-8.8-16.3-2.1.417-3.3 12.016-3.3 12.016 1.5 11.39 6.533 25.093 10.333 35.96l4.567-.852c.2 0-2.5-14.628-2.8-30.824z"/>
+                            <path class="H2" d="M186.87 152.17c-1 .11-2.9.774-4 .885-.6.11-2 4.318-2.8 7.308-.4 1.44-1 8.083-1 9.633l.4 6.312s1.5 5.315 1.8 5.98c.5 1.55 1.4.664 1.4.664s1.3 3.22 1.4 3.55c.3.67.8.89 1.3.78 2.3-.44-.1-5.09-.9-7.192.2-1.44-.3-4.872-.3-4.872s1 6.2 1.1 6.756c.1 1.77 2.1 4.87 2.4 5.87.1.995 1.6 1.327 2.4.44 1.7-1.88-1.8-6.53-1.8-6.53.4-2.216-.7-7.53-.7-7.53s1.5 9.52 2.2 11.736c.1.333 1.1 4.984 1.3 5.205.3.554 1 .554 1.5.333 2.2-1.33.7-6.866.2-7.862-.1-.33-.1-4.32-.7-7.75.15-4.882-.227-5.843-.8-7.64s.9 3.544 1.5 4.54c.04 4.22 2.277 7.61 4.355 6.67.8-.663.19-5.314-.555-8.552l-2.4-7.525c.2.33-6.2-11.3-7.3-11.19v-.028z"/>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    
+                    </div>
+                    </div>
+				</div>
+				<div class="offset-lg-0 col-lg-10 offset-md-0 col-md-12 about-left">
+					<h1>
+						Let's Learn <br>Chemistry
+					</h1>
+					<div class="wow fadeIn" data-wow-duration="1s">
+						<p>
+							Check My Youtube Videos,Subscribe My Youtube Channel And Learn Chemistry In A Easy Way.Attempt Tests For Self Evaluation And Improvement 
+						</p>
+					</div>
+					<a href="/videos/" class="primary-btn">Explore Videos</a>
+				</div>
+			</div>
+		</div>
+    </section>
+
+    <!--news-->
+
+ 
+
+    
+
+    
+<section class="gallery" >
+
+
+
+
+
+
+		<div class="container mb-0">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-title text-center" style="margin-top: 16vh;">
+						<h1>Recent Videos In Chemistry</h1>
+						<p>
+							If you are looking for Chemistry course on web, you may be very confused ..just watch our videos
+						</p>
+					</div>
+				</div>
+            </div>
+            
+			<div class="feature-inner row" >
+                {% for post in allPosts|slice:":6"%}
+				<div class="col-lg-4 col-md-6" >
+                    
+					<div class="feature-item" style="margin-top: 0vh; margin-bottom: 19.5vh;">
+                        <div class="iframe-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{post.youtube_link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <p>{{post.title}}</p>
+                        </div>
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+                
+				
+            </div>
+            
+            
+		</div>
+    </section>
+    <section id="news3">
+        {% for n in news|slice:":3" %}
+    <div class="alert alert-danger" role="alert">
+        
+        <marquee behavior="scroll" direction="left"><strong><h5>{{n.news}}</h5></strong></marquee>
+
+    </div>
+    {% endfor %}
+    
+   </section>
+
+
+
+
+
+
+
+
+
+
+   
+
+
+    
+        
+
+    
+
+    <!--test-->
+
+
+	<!-- Start Courses Area -->
+	<section class="courses-area section-gap" id='courses'>
+		<div class="container mb-0">
+			<div class="row align-items-center">
+				<div class="col-lg-5 about-right">
+					<h1 style="margin-top: 6vh;">
+						Laern Cheistry <br>The Easy Way
+					</h1>
+					<div class="wow fadeIn" data-wow-duration="1s">
+						<p>
+							WeakIn Chemistry?, Don't Worry I Can Help You
+						</p>
+					</div>
+					<a href="courses.html" class="primary-btn white">Explore Courses</a>
+				</div>
+				<div class="offset-lg-1 col-lg-6">
+					<div class="courses-right">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<ul class="courses-list">
+									<li>
+										<a class="wow fadeInLeft" href="/organic/" data-wow-duration="1s" data-wow-delay=".1s">
+											<i class="fa fa-book"></i> Organic Chemistry
+										</a>
+									</li>
+									<li>
+										<a class="wow fadeInLeft" href="/inorganic/" data-wow-duration="1s" data-wow-delay=".3s">
+											<i class="fa fa-book"></i> Inorganic Chemistry
+										</a>
+									</li>
+									
+									
+								</ul>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<ul class="courses-list">
+									<li>
+										<a class="wow fadeInRight" href="/physical/" data-wow-duration="1s" data-wow-delay="1.3s">
+											<i class="fa fa-book"></i> Physical Chemistry
+										</a>
+                                    </li>
+                                    <li>
+										<a class="wow fadeInLeft" href="/book/" data-wow-duration="1s" data-wow-delay=".5s">
+											<i class="fa fa-book"></i>Book Solution
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <!-- End Courses Area -->
+
+    <div class="cp">
+        <p></p>
+    </div>
+
+    
+
+
+	<!--Start Feature Area -->
+	<section class="feature-area" id="feature">
+		<div class="container mb-0">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-title text-center" style="margin-top: 8vh;">
+						<h1>Features That Make Us Best</h1>
+						<p>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="feature-inner row">
+				<div class="col-lg-4 col-md-6">
+					<div class="feature-item">
+                        <i class="material-icons" style="font-size:44px">school</i>
+						
+						<h4>Educate</h4>
+						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
+							<p>
+								Let's make education easy to access for all
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature-item">
+						<i class="fa fa-flask" style="font-size:44px"></i>
+						<h4>Learn Chemistry</h4>
+						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+							<p>
+								Learn Chemistry In Very Easy Way Using Super Tricks
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature-item">
+						<i class='fas fa-chalkboard-teacher' style='font-size:44px'></i>
+						<h4>Online Learning</h4>
+						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+							<p>
+								Learn Chemistry sitting in home
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature-item">
+						<i class='fas fa-chart-line' style='font-size:44px'></i>
+						<h4>Test/Examinations</h4>
+						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
+							<p>
+								Improve Your Preperation Attempting Tests With Realtime Self Evaluation
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature-item">
+						<i class="ti-files"></i>
+						<h4>Notes Included</h4>
+						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+							<p>
+								Notes are included in every video
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="feature-item">
+						<i class='fas fa-phone' style='font-size:44px'></i>
+						<h4>Live Support</h4>
+						<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+							<p>
+								Give us feedback in CONTACT page
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Feature Area -->
+
+
+	<!-- Start Faculty Area -->
+	<section class="faculty-area section-gap" id="faculty" >
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-title text-center">
+						<h1>Faculty Members</h1>
+						<p>
+							Experienced Teacher,explains Chemistry in a very easy way
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center d-flex align-items-center">
+				<div class="col-lg-3 col-md-6 col-sm-12 single-faculty">
+					<div class="thumb d-flex justify-content-center">
+						<img class="img-fluid" src="https://i.imgur.com/6nmjpZi.jpg?1" alt="">
+					</div>
+					<div class="meta-text text-center">
+						<h4>Ethel Davis</h4>
+						<p class="designation">Sr. Faculty Chemistry</p>
+						<div class="info wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
+							<p>
+								
+							</p>
+						</div>
+						<div class="align-items-center justify-content-center d-flex">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Faculty Area -->
+
+
+	<!-- Start Testimonials Area --></div>
+	<!-- End Testimonials Area -->
+</div>
+
+    <!-- Start Footer Area -->
+    
+    <footer class="footer-area section-gap">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Videos</h4>
+					<ul>
+						<li><a href="#">Organic Chemistry</a></li>
+						<li><a href="#">Inorganic Chemistry</a></li>
+						<li><a href="#">Physical Chemistry</a></li>
+						<li><a href="#">Book Solution</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Faculty</h4>
+					<ul>
+						<li><a href="#">Experienced</a></li>
+						<li><a href="#">Nice Explaination</a></li>
+						
+					</ul>
+				</div>
+				
+				<div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Test</h4>
+					<ul>
+						<li><a href="#">JEE</a></li>
+						<li><a href="#">NEET</a></li>
+						<li><a href="#">Boards</a></li>
+						<li><a href="#">Othe Competetive Exams</a></li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="footer-bottom row align-items-center">
+				<p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;All rights reserved | This Website is developed by <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="http://shayancyber.pythonanywhere.com/" target="_blank">Shayan</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				<div class="col-lg-4 col-md-12 footer-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-behance"></i></a>
+				</div>
+			</div>
+		</div>
+    </footer>
+
+    
+	<!-- End Footer Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#"></a>
+    </div>
+</body>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+	<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="{% static 'js/easing.min.js' %}"></script>
+	<script src="{% static 'js/hoverIntent.js' %}"></script>
+	<script src="{% static 'js/superfish.min.js' %}"></script>
+	<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/owl-carousel-thumb.min.js' %}"></script>
+	<script src="{% static 'js/jquery.sticky.js' %}"></script>
+	<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'js/parallax.min.js' %}"></script>
+	<script src="{% static 'js/waypoints.min.js' %}"></script>
+	<script src="{% static 'js/wow.min.js' %}"></script>
+	<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
+    
+
+
+    
+    <script>
+        $(window).scroll(function() {
+           if ($(document).scrollTop() > 50) {
+               $('.nav').addClass('affix');
+               console.log("OK");
+           } else {
+               $('.nav').removeClass('affix');
+           }
+       });
+   </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   
+   <script>
+
+$('.navTrigger').click(function () {
+   $(this).toggleClass('active');
+   console.log("Clicked menu");
+   $("#mainListDiv").toggleClass("show_list");
+   $("#mainListDiv").fadeIn();
+
+});
+   </script>
+
+
+
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+
+
+<script>
+/* a Pen by Diaco m.lotfollahi  : https://diacodesign.com */
+var 
+Doc = document , TwL = TweenLite , E0=Sine.easeInOut , E1=Sine.easeIn , E2=Sine.easeOut 
+B = Doc.getElementById('B') ,  UB = Doc.getElementById('UB') ,
+F = Doc.getElementById('FF') , H = Doc.getElementById('HF') ;
+TwL.set('svg',{opacity:1});
+TwL.set(B,{y:10});
+TwL.set(UB,{fill:'#151515',transformOrigin:'50% 100%'});
+TwL.set(H,{transformOrigin:'-5px 0px',rotation:-10,fill:'#454545',y:-1});
+TwL.set(F,{transformOrigin:'55% 10px',rotation:-37,fill:'#DC0026'});
+TwL.set('#H',{transformOrigin:'5px 50px',fill:'#454545',scale:0.967,rotation:-5});
+TwL.set('.H1',{rotation:-20,transformOrigin:'0px 5px',y:-5});
+TwL.set('.H2',{transformOrigin:'10% 0%',rotation:-10,y:-1.5,scaleY:1.03});
+TwL.set('.F1',{transformOrigin:'21px 2px'});
+TwL.set('.F2',{transformOrigin:'25px 0px'});
+TwL.set('.F3',{transformOrigin:'4.2px 4.2px'});
+var F2 = F.cloneNode(true) , H2 = H.cloneNode(true); 
+F2.id = 'FB'; H2.id = 'HB'; 
+B.insertBefore(F2,UB);  B.insertBefore(H2,F2); 
+TwL.set('.FB',{fill:'#DC0026'});
+TwL.set('#FB',{fill:'#A50018'});
+TwL.set('#HB',{y:-3,fill:'#333'});
+function M(p1,p2){
+var tl = new TimelineMax({repeat:-1})
+.add("l1",0).add("l2",.25).add("l3",.5).add("l4",.75).add("l5",1)
+.to(p1,.5,{rotation:27,ease:E0},'l1')
+.to(p1,.25,{rotation:-37,ease:E1},'l3')
+.to(p1+' .F1',.25,{rotation:15,ease:E0},'l2')
+.to(p1+' .F1',.25,{rotation:80,ease:E1},'l3')
+.to(p1+' .F1',.25,{rotation:0,ease:E2},'l4')
+.to(p1+' .F2',.25,{rotation:45,repeat:1,yoyo:true},'l3')
+.to(p1+' .F3',.25,{rotation:-35,repeat:1,yoyo:true,scaleX:.925},'l2')
+.to(p2,.5,{rotation:25,ease:E0,yoyo:true,repeat:1},'l1')
+.to(p2+' .H1',.5,{rotation:15,ease:E0,yoyo:true,repeat:1},'l1')
+.to(p2+' .H2',.5,{rotation:0,ease:E0,yoyo:true,repeat:1},'l1');
+return tl;
+};
+var MTl = new TimelineLite()
+.add(M('#FF','#HB')).add(M('#FB','#HF'),0.5)
+.to(B,.25,{y:'+='+-20,repeat:-1,yoyo:true,ease:E0},0)
+.to('#H',.25,{rotation:1,repeat:-1,yoyo:true,ease:E0},0)
+.to('#mSH',.25,{scaleX:.6,repeat:-1,yoyo:true,ease:E1,transformOrigin:'center'},0)
+.time(.5);
+/* a Pen by Diaco m.lotfollahi : https://diacodesign.com */
+
+
+
+
+	
+</script>
+
+<script>
+    /*loader*/
+    $(window).on("load",function(){
+      $(".loader-wrapper").fadeOut("slow");
+    });
+</script>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+ <script src="//cdn.jsdelivr.net/jquery.localscroll/1.4.0/jquery.localScroll.min.js"></script>
+
+
+</html>

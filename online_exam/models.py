@@ -75,6 +75,7 @@ class question_type(models.Model):
 
 class question_bank(models.Model):
     question = models.TextField(null="True", blank=True)
+    image2 = models.ImageField(null="true",blank=True)
     description = models.TextField(null="True", blank=True)
     question_type = models.ForeignKey(question_type, on_delete = models.CASCADE)
     subtopic_id = models.ForeignKey(subtopic, on_delete = models.CASCADE)
@@ -126,3 +127,55 @@ class MatchTheColumns(models.Model):
     answer = models.TextField(null="True", blank=True)
     def __str__(self):
         return str(self.id) + "; " + str(self.question_id) + "; " + str(self.question) + "; " + str(self.answer)
+
+
+#custom section
+
+
+from django.db import models
+
+# Create your models here.
+class Category(models.Model):
+    
+    
+    title = models.CharField(max_length=250,default="")
+    def __str__(self):
+        return self.title
+    
+
+
+
+
+
+
+
+class Post(models.Model):
+    sno = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=200)
+    desc = models.TextField()
+    youtube_link = models.CharField(max_length= 600)
+    
+    categories = models.ForeignKey(Category, on_delete=models.SET_DEFAULT,default="")
+    notes2 = models.ImageField(upload_to='static2/images',default="",blank=True)
+    notes1 = models.ImageField(upload_to='static2/images',default="",blank=True)
+    notes3 = models.ImageField(upload_to='static2/images',default="",blank=True)
+    notes4 = models.ImageField(upload_to='static2/images',default="",blank=True)
+    timeStamp = models.DateTimeField(blank=True)
+    def __str__(self):
+        return self.title 
+    class Meta:
+        
+        managed = True
+        verbose_name ='video'
+        verbose_name_plural ='videos'
+class News(models.Model):
+    sno = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=200)
+    news = models.TextField()
+    timeStamp = models.DateTimeField(blank=True)
+
+
+
+
+
+

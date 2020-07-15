@@ -1,5 +1,8 @@
 from django.conf.urls import url
+from django.urls import path , include
 from . import views
+from django.contrib import admin
+from django.contrib import admin
 urlpatterns = [
     url(r'^faculty_dashboard/$', views.faculty_dashboard, name='faculty_dashboard'),
     url(r'^faculty_add_course/$', views.faculty_add_course, name='faculty_add_course'),
@@ -43,4 +46,21 @@ urlpatterns = [
     url(r'^authenticate/(?P<token>[A-Za-z0-9_\.-]*)/$', views.authenticate, name='authenticate'),
     url(r'^get_exams_by_course/$', views.get_exams_by_course, name='get_exams_by_course'),
     url(r'^get_subtopics_by_topic/$', views.get_subtopics_by_topic, name='get_subtopics_by_topic'),
-]
+     
+    path('', views.home,name="home"),
+    path('videos/', views.videos,name="home"),
+    path('about/', views.about, name="about"),
+    path('contact/', views.contact,name="contact"),
+    path('inorganic/', views.inorganic,name="inorganic"),
+    path('organic/', views.organic,name="organic"),
+    path('physical/', views.physical,name="physical"),
+    path('book/', views.book,name="book"),
+    path('addvideo/', views.addvideo,name="addvideo"),
+    path('search/',views.search,name="search")
+    
+    
+    ]
+    
+
+
+
