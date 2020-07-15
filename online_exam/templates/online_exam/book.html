@@ -16,7 +16,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Book</title>
+	<title>Book Solution</title>
 
 	<!--
 			Google Font
@@ -47,7 +47,7 @@
 <!------ Include the above in your HEAD tag ---------->
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 html,
 body {
     margin: 0;
@@ -59,21 +59,15 @@ body {
 }
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
-#drop{
-    background-color:black;
-    width:auto;
-    
-
-}
-#dropx {
-    text-align: right;
-    width: 100%;
-    font-size: 2.1rem;
-    padding: 0px;
-    height:40px;
-}
 
 /* Navbar section */
+
+
+
+
+
+
+
 
 .nav {
     width: 100%;
@@ -175,7 +169,7 @@ body {
     .nav div.main_list ul {
         flex-direction: column;
         width: 100%;
-        height: 40vh;
+        height: auto;
         right: 0;
         left: 0;
         bottom: 0;
@@ -564,7 +558,19 @@ svg {
   display: block;
 }
 
+#drop{
+    background-color:black;
+    width:auto;
+    
 
+}
+#dropx {
+    text-align: right;
+    width: 100%;
+    font-size: 2.1rem;
+    padding: 0px;
+    height:40px;
+}
 
 
 </style>
@@ -572,45 +578,44 @@ svg {
 
 <body>
     <section>
-    <header id="header" >
-        <nav class="nav">
-            <div class="container">
-                <div class="logo">
-                     <a href="#"><img style="padding-top: 0mm;" src="https://i.imgur.com/QH6rBMn.png" alt=""></a>
+        <header id="header">
+            <nav class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#"><img style="padding-top: 0mm;" src="https://i.imgur.com/QH6rBMn.png" alt=""></a>
+                    </div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="navlinks">
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/contact/">Contact</a></li>
+                          <li><a href="/about/">About</a></li>
+                          <li><a href="/signup/">Test</a></li>
+                          <li><a href="/videos/">Videos</a></li>
+                            <li id="dropy">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="dropx">Categories</a>
+                                <div class="dropdown-menu" id ="drop">
+                                  <a class="dropdown-item" href="/organic/">Organic Chemistry</a>
+                                  <a class="dropdown-item" href="/inorganic/">Inorganic Chemistry</a>
+                                  <a class="dropdown-item" href="/physical/">Physical</a>
+                                  <a class="dropdown-item" href="/book/">Book Solution</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="/admin/">Admin</a>
+                                </div>
+                            </li>
+                            
+                            
+                             
+                        </ul>
+                    </div>
+                    <span class="navTrigger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
                 </div>
-                <div id="mainListDiv" class="main_list">
-                    <ul class="navlinks">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/contact/">Contact</a></li>
-                        <li><a href="/about/">About</a></li>
-                        <li><a href="/signup/">Test</a></li>
-                        <li><a href="/videos/">Videos</a></li>
-						 
-                        <li id="dropy">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="dropx">Categories</a>
-                            <div class="dropdown-menu" id ="drop">
-                              <a class="dropdown-item" href="/organic/">Organic Chemistry</a>
-                              <a class="dropdown-item" href="/inorganic/">Inorganic Chemistry</a>
-                              <a class="dropdown-item" href="/physical/">Physical Chemistry</a>
-                              <a class="dropdown-item" href="/book/">Book Solution</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="/admin/">Admin</a>
-                            </div>
-                        </li> 
-                    </ul>
-                </div>
-                <span class="navTrigger">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
-            </div>
-        </nav>
-        
-     
-    </header>
-    
-</section>
+            </nav>
+        </header>
+    </section>
 
     <!-- Start Header Area -->
     
@@ -893,7 +898,7 @@ svg {
     <!-- Start top-category-widget Area -->
     <div class="widget-wrap">
     
-    </div>
+</div>
 <div class="container mt-2">
 	<div class="widget-wrap ">
 		<div class="row">
@@ -1136,7 +1141,7 @@ svg {
 							
 						</div>
 						<div class="single-sidebar-widget user-info-widget">
-							<img src="https://i.imgur.com/6nmjpZi.jpg?1" alt="">
+							<img style="height:65px; width:65px" src="https://i.imgur.com/6nmjpZi.jpg?1" alt="">
 							<a href="#"><h4>Roshan Singh</h4></a>
 							<p>
 								Senior Chemistry Teacher
@@ -1148,8 +1153,7 @@ svg {
 								<li><a href="#"><i class="fa fa-behance"></i></a></li>
 							</ul>
 							<p>
-								Boot camps have its supporters andit sdetractors. Some people do not understand why you should have to spend money on boot
-								camp when you can get. Boot camps have itssuppor ters andits detractors.
+								
 							</p>
 						</div>
 						<div class="single-sidebar-widget popular-post-widget">
