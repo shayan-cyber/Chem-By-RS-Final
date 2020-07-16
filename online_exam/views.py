@@ -1002,6 +1002,8 @@ def student_verify(request):
         for i in attempted.keys():
             attempted_answer = dict(attempted[i])
             print(attempted_answer['answers'])
+            #print(json)
+            print(len(json.dumps(attempted_answer['answers'])))
             #print(attempted_answer['question_id'])
             ans = dict()
             ques = question_bank.objects.get(pk = attempted_answer['question_id'])
@@ -1018,6 +1020,9 @@ def student_verify(request):
                     temp.answer += attempted_answer["answers"][j] + "; "
                 if(json.dumps(ans) == json.dumps(attempted_answer['answers'])):
                     temp.score = int(attempted_answer['score'])
+                elif(len(json.dumps(attempted_answer['answers'])) == 2 ):
+                    temp.score = 0
+                    print("hello")
                 else:
                     temp.score = -1
                 marks += temp.score
@@ -1034,11 +1039,15 @@ def student_verify(request):
                     temp.answer += j + " - " + attempted_answer["answers"][j] + "; "
                 if(json.dumps(ans) == json.dumps(attempted_answer['answers'])):
                     temp.score = int(attempted_answer['score'])
+                elif(len(json.dumps(attempted_answer['answers'])) == 2 ):
+                    temp.score = 0
+                    print("hello")
                 else:
                     temp.score = -1
                 marks += temp.score
                 temp.verify = 1
                 temp.save()
+                
             else:
                 temp = result()
                 temp.registration_id = registration.objects.get(pk = int(request.POST["registration_id"]))
