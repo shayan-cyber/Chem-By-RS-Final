@@ -917,6 +917,11 @@ def student_attempt_exam(request):
         registration_id = request.POST['registration_id']
         exam_id = ""
         j = 0
+        x = int(len(questions))
+        num2 = 4
+        length1 = num2*x
+        print(length1)
+        length2 = len(questions)
         for i in questions:
 
             L = dict()
@@ -965,7 +970,7 @@ def student_attempt_exam(request):
         a = datetime.datetime.now()
         b = datetime.datetime(i.exam_id.end_time.year,i.exam_id.end_time.month,i.exam_id.end_time.day,i.exam_id.end_time.hour,i.exam_id.end_time.minute,i.exam_id.end_time.second)
         seconds = math.floor((b-a).total_seconds())
-        return render(request, 'online_exam/student_attempt_exam.html', {"myArray":final, "sizeMyArray":j, "exam_id":exam_id, "registration_id":registration_id, "seconds": seconds})
+        return render(request, 'online_exam/student_attempt_exam.html', {"myArray":final, "sizeMyArray":j, "exam_id":exam_id, "registration_id":registration_id, "seconds": seconds,"length1":length1,"length2":length2})
     else:
         return redirect("../login")
 def student_approved_exams(request):
