@@ -134,10 +134,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media/static2/images')
 
+#Email Section
+
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'debroyshayan@gmail.com'
-EMAIL_HOST_PASSWORD = 'goodboyshayan'
+EMAIL_HOST_USER = 'shayan.cyber.dev@gmail.com'
+EMAIL_HOST_PASSWORD = 'vwwnqbqlucijtmcs'
 EMAIL_USE_TLS = True
 #EMAIL_USE_SSL = False
